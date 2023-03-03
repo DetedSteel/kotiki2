@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+}
+
+.select_container {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+.smallImg {
+    height: 100px;
+}
+
+.container {
+    height:calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+}
+
+.bigImg {
+    height:calc(100vh - 150px);
+}
+
+.burger {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url(https://freevector.co/wp-content/uploads/2014/03/23206-multiple-line-outlines1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+}
+
+.none {
+    display: grid!important
+}
+
+@media (max-width: 400px) {
+    .burger {
+        display: block;
+    }
+
+    .select_container {
+        display: none;
+        grid-template-columns: repeat(2, calc(50vw - 10px));
+        height: 300px;
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        overflow-x: scroll;
+        
+    }
+
+    .smallImg {
+        width: calc(50vw - 10px);
+        height: auto;
+    }
+
+    .bigImg {
+        width: calc(100vw);
+        height: auto;
+        
+    }
+
+    .container {
+        align-items: center;
+    }
+}
